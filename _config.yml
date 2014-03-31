@@ -1,6 +1,6 @@
-name:          Code Guide by @mdo
-description:   Standards for developing flexible, durable, and sustainable HTML and CSS.
-url:           http://codeguide.co
+name:          Przewodnik stylu
+description:   Porady jak pisać dobry i ładny kod w HTML i CSS.
+url:           http://maciej.żok.pl/przewodnik-stylu
 
 markdown:      rdiscount
 permalink:     pretty
