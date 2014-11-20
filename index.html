@@ -26,17 +26,17 @@ layout: default
   <div class="col">
     <h4><a href="#css">CSS</a></h4>
     <ul>
-      <li><a href="#css-syntax">CSS syntax</a></li>
-      <li><a href="#css-declaration-order">Declaration order</a></li>
-      <li><a href="#css-import">Don't use @import</a></li>
+      <li><a href="#css-syntax">Składnia</a></li>
+      <li><a href="#css-declaration-order">Kolejność deklaracji</a></li>
+      <li><a href="#css-import">Nie używaj @import</a></li>
       <li><a href="#css-media-queries">Media query placement</a></li>
       <li><a href="#css-prefixed-properties">Prefixed properties</a></li>
       <li><a href="#css-single-declarations">Rules with single declarations</a></li>
       <li><a href="#css-shorthand">Notacja skrócona</a></li>
-      <li><a href="#css-nesting">Nesting in Less and Sass</a></li>
-      <li><a href="#css-comments">Comments</a></li>
-      <li><a href="#css-classes">Classes</a></li>
-      <li><a href="#css-selectors">Selectors</a></li>
+      <li><a href="#css-nesting">Zagnieżdżanie w Less i Sass</a></li>
+      <li><a href="#css-comments">Komentarze</a></li>
+      <li><a href="#css-classes">Klasy</a></li>
+      <li><a href="#css-selectors">Selektory</a></li>
       <li><a href="#css-organization">Organizacja kodu</a></li>
     </ul>
   </div>
@@ -46,11 +46,11 @@ layout: default
 <div class="section" id="golden-rule">
   <div class="col">
     <h2>Złota zasada</h2>
-    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/mdo/code-guide/issues/new">open an issue on GitHub</a>.</p>
+    <p>Staraj się zawsze używać tych samych, uzgodnionych reguł – poniższych lub własnych. Wszystkie błędy lub rozszerzenia możesz <a href="https://github.com/macie/przewodnik-stylu/issues/new">zgłosić na GitHubie</a>.</p>
   </div>
   <div class="col">
     <blockquote>
-      <p>Każda linia kodu powinna wyglądać tak, jakby była napisana przez jedną i tę samą osobę.</p>
+      <p>Kod źródłowy powinnien wyglądać tak, jakby był napisany przez jedną osobę.</p>
     </blockquote>
   </div>
 </div>
@@ -80,7 +80,7 @@ layout: default
 <div class="section" id="html-doctype">
   <div class="col">
     <h3>Doctype HTML5</h3>
-    <p>Wymusisz standardowe i spójne renderowanie kodu dla wszystkich przeglądarek stosując proste wywołanie doctype na początku każdej strony HTML.</p>
+    <p>Używaj wywołania <code>doctype</code> na początku każdej strony HTML. W ten sposób wymusisz standardowe i spójne renderowanie kodu we wszystkich przeglądarkach.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
@@ -92,7 +92,7 @@ layout: default
     <h3>Atrybut języka</h3>
     <p>Za specyfikacją HTML5:</p>
     <blockquote>
-      <p>Zachęcamy autorów do określenia języka dokumentu przez podanie atrybutu języka dla głównego znacznika html. To pomoże syntezatorom mowy wybrać odpowiednią wymowę, programom tłumaczącym – odpowiednią gramatykę, itd.</p>
+      <p>Zachęcamy autorów do określenia języka dokumentu przez podanie atrybutu języka <code>lang</code> w głównym znaczniku <code>&lt;html&gt;</code>. To pomoże syntezatorom mowy wybrać odpowiednią wymowę, programom tłumaczącym – odpowiednią gramatykę, itd.</p>
     </blockquote>
     <p>Przeczytaj więcej o tym atrybucie <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">w specyfikacji <small>[EN]</small></a>.</p>
     <p><a href="http://webmaster.helion.pl/index.php/kodyjezykowe/5-kurs-html/501-kodyjezykowe?tmpl=component&print=1">Lista kodów języków</a>.</p>
@@ -105,7 +105,7 @@ layout: default
 <div class="section" id="html-ie-compatibility-mode">
   <div class="col">
     <h3>Tryb zgodności IE</h3>
-    <p>W Internet Explorer można wybrać wersję przeglądarki, z jaką jest zgodna dana strona HTML używając znacznika <code>&lt;meta&gt;</code>. Najczęściej najlepszym rozwiązaniem będzie zadeklarowanie najnowszego wspieranego trybu – <strong>edge</strong>.</p>
+    <p>Internet Explorer pozwala wybrać wersję przeglądarki, z jaką jest zgodna dana strona HTML, używając znacznika <code>&lt;meta&gt;</code>. Najczęściej najlepszym rozwiązaniem będzie zadeklarowanie najnowszego wspieranego trybu – <strong>edge</strong>.</p>
     <p>Więcej informacji znajdziesz <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">w tym świetnym wątku na Stack Overflow <small>[EN]</small></a>.</p>
   </div>
   <div class="col">
@@ -126,7 +126,7 @@ layout: default
 <div class="section" id="html-style-script">
   <div class="col">
     <h3>Wstawki CSS i JavaScript</h3>
-    <p>Zgodnie ze specyfikacją HTML5 zasadniczo nie musisz deklarować atrybutu <code>type</code> kiedy dołączasz pliki CSS i JavaScript. Wartości <code>text/css</code> i <code>text/javascript</code> są dla niego domyślne.</p>
+    <p>W HTML5 nie musisz deklarować atrybutu <code>type</code> kiedy dołączasz pliki CSS i JavaScript. Wartości <code>text/css</code> i <code>text/javascript</code> są dla niego domyślne.</p>
     <h4>Specyfikacja HTML5:</h4>
     <ul>
       <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">znacznik link <small>[EN]</small></a></li>
@@ -149,16 +149,16 @@ layout: default
 <div class="section" id="html-attribute-order">
   <div class="col">
     <h3>Kolejność atrybutów</h3>
-    <p>Dla zachowania czytelności atrybuty HTML powinny występować w następującej kolejności:</p>
+    <p>Dla zachowania czytelności atrybuty HTML używaj w następującej kolejności:</p>
     <ul>
       <li><code>class</code></li>
       <li><code>id</code>, <code>name</code></li>
       <li><code>data-*</code></li>
-      <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code></li>
+      <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code></li>
       <li><code>title</code>, <code>alt</code></li>
       <li><code>aria-*</code>, <code>role</code></li>
     </ul>
-    <p>Klasy służą do oznaczania dużej liczby powtarzalnych elementów, więc są na pierwszym miejscu. Identyfikatory są bardziej szczegółowe i powinny występować rzadziej (np. w celu stworzenia odnośników wewnętrz strony), dlatego są tuż za nimi.</p>
+    <p>Klasy służą do oznaczania dużej liczby powtarzalnych elementów, więc są na pierwszym miejscu. Identyfikatory będą tuż za nimi, ponieważ są bardziej szczegółowe i powinny występować rzadziej (np. w celu stworzenia odnośników wewnętrz strony).</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
@@ -187,7 +187,7 @@ layout: default
 <div class="section" id="html-reducing-markup">
   <div class="col">
     <h3>Redukcja kodu</h3>
-    <p>Tam gdzie to możliwe unikaj nadmiarowej liczby znaczników HTML. Czasami zmiany będą wymagały trochę pracy, ale dzięki temu otrzymasz mniejszy i szybszy kod. Zobacz przykład:</p>
+    <p>Tam gdzie to możliwe unikaj nadmiarowej liczby znaczników HTML. Czasami zmiany będą wymagały trochę pracy, ale dzięki temu otrzymasz mniejszy i szybszy stronę.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
@@ -211,22 +211,22 @@ layout: default
   <div class="col">
     <h3>Składnia</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>When grouping selectors, keep individual selectors to a single line.</li>
-      <li>Include one space before the opening brace of declaration blocks for legibility.</li>
-      <li>Place closing braces of declaration blocks on a new line.</li>
-      <li>Include one space after <code>:</code> for each declaration.</li>
-      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
-      <li>End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.</li>
-      <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
-      <li>Don't include spaces after commas <em>within</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-      <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
-      <li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
-      <li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
-      <li>Quote attribute values in selectors, e.g., <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
-      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>Używaj wcięć o rozmiarze dwóch spacji — tylko ta metoda zagwarantuje taki sam wygląd kodu zawsze i wszędzie.</li>
+      <li>Grupując selektory umieszczaj każdy w osobnym wierszu.</li>
+      <li>Otwierający nawias klamrowy <code>{</code> poprzedzaj jedną spacją.</li>
+      <li>Zamykający nawias klamrowy <code>}</code> zapisuj w nowym wierszu.</li>
+      <li>Po każdym dwukropku <code>:</code> wstawiaj spację.</li>
+      <li>Deklaracje umieszczaj w osobnych liniach. Dzięki temu komunikaty o błędach będą bardziej czytelne.</li>
+      <li>Każdą deklarację kończ średnikiem. Choć w przypadku ostatniej deklaracji nie jest to wymagane, to w ten sposób zabezpieczysz się przed błędami.</li>
+      <li>Dodawaj spację po przecinku dla wartości właściwości rozdzielanych przecinkami (np. <code>box-shadow</code>).</li>
+      <li>Nie używaj spacji po przecinkach <em>wewnątrz</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code> i <code>rect()</code>. Ułatwi to odróżnianie definicji koloru (przecinek bez spacji) od wielokrotnych wartości właściwości (przecinek ze spacją).</li>
+      <li>Nie poprzedzaj wartości zerem (np. pisz <code>.5</code> zamiast <code>0.5</code> oraz <code>-.5px</code> zamiast <code>-0.5px</code>).</li>
+      <li>Wszystkie wartości szestnastkowe zapisuj małymi literami (np. <code>#fff</code>). Ze względu na ich kształt, mózg ludzki łatwiej rozróżnia małe litery.</li>
+      <li>Tam gdzie to możliwe używaj skróconych wartości szestnastkowych (np. <code>#fff</code> zamiast <code>#ffffff</code>).</li>
+      <li>Umieszczaj w cudzysłowiu wartości atrybutów w selektorze (np. <code>input[type="text"]</code>). Choć <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">czasami jest to opcjonalne <small>[EN]</small></a>, to jednak lepiej trzymać się spójnego stylu.</li>
+      <li>Unikaj podawania jednostek dla wartości zero (np. zamiast <code>margin: 0px;</code> pisz <code>margin: 0;</code>).</li>
     </ul>
-    <p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+    <p>Nie wiesz co oznaczają powyższe określenia? Poczytaj o <a href="http://pl.wikipedia.org/wiki/Kaskadowe_arkusze_styl%C3%B3w#Sk.C5.82adnia_arkuszy">składni CSS na Wikipedii <small>[PL]</small></a>.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
@@ -235,17 +235,17 @@ layout: default
 
 <div class="section" id="css-declaration-order">
   <div class="col">
-    <h3>Declaration order</h3>
-    <p>Related property declarations should be grouped together following the order:</p>
+    <h3>Kolejność deklaracji</h3>
+    <p>Deklaracje właściwości grupuj według następującego porządku:</p>
     <ol>
       <li>Rozmieszczenie</li>
       <li>Model pudełkowy</li>
       <li>Typografia</li>
       <li>Wygląd</li>
     </ol>
-    <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
-    <p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
-    <p>For a complete list of properties and their order, please see <a href="http://twitter.github.com/recess">Recess</a>.</p>
+    <p>Rozmieszczenie jest pierwsze, ponieważ nadpisuje zastany model pudełkowy. Następne są definicje modelu pudełkowego ustalające wymiary i położenie elementu.</p>
+    <p>Reszta dotyczy <em>wnętrza</em> elementu lub nie wpływa na poprzednie dwie sekcje.</p>
+    <p>Pełną listę właściwości i ich kolejności znajdziesz na stronie <a href="http://twitter.github.com/recess">Recess <small>[EN]</small></a>.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
@@ -255,13 +255,13 @@ layout: default
 <div class="section" id="css-import">
   <div class="col">
     <h3>Nie używaj <code>@import</code></h3>
-    <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
+    <p>Polecenie <code>@import</code> w porównaniu do znacznika <code>&lt;link&gt;</code> jest wolniejsze, wymaga wysłania dodatkowych żądań do serwera i może spowodować inne nieprzewidziane problemy. Zamiast niego wypróbuj inne metody:</p>
     <ul>
-      <li>używaj wielu znaczników <code>&lt;link&gt;</code>,</li>
-      <li>Compile your CSS with a preprocessor like Sass or Less into a single file</li>
-      <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
+      <li>stosuj wiele znaczników <code>&lt;link&gt;</code>,</li>
+      <li>używaj preprocesora CSS w rodzaju Sass lub Less do stworzenia skompresowanego pliku,</li>
+      <li>łącz pliki CSS w jeden plik korzystając z narzędzi takich jak Rails, Jekyll lub innych.</li>
     </ul>
-    <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+    <p>Więcej informacji znajdziesz w <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">artykule Steve'a Soudersa <small>[EN]</small></a>.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include css/import.html %}{% endhighlight %}
@@ -282,7 +282,7 @@ layout: default
   <div class="col">
     <h3>Prefixed properties</h3>
     <p>When using vendor prefixed properties, indent each property such that the declaration's value lines up vertically for easy multi-line editing.</p>
-    <p>In Textmate, use <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). In Sublime Text 2, use <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) and <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
+    <p>W Textmate użyj <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). W Sublime Text: <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) i <strong>Selection &rarr;  Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
@@ -363,7 +363,7 @@ layout: default
 
 <div class="section" id="css-selectors">
   <div class="col">
-    <h3>Selectors</h3>
+    <h3>Selektory</h3>
     <ul>
       <li>Use classes over generic element tag for optimum rendering performance.</li>
       <li>Avoid using several attribute selectors (e.g., <code>[class^="..."]</code>) on commonly occuring components. Browser performance is known to be impacted by these.</li>
